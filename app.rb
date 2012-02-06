@@ -6,6 +6,10 @@ get '/' do
   'Hello world!'
 end
 
+get '/members' do
+  Members.all.inspect
+end
+
 post '/member/add' do
   member = Members.new(params)
 
