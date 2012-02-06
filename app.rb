@@ -10,6 +10,11 @@ get '/members' do
   Members.all.inspect
 end
 
+get '/member/:id/email' do
+  member = Members.find(params[:id])
+  member.email
+end
+
 post '/member/add' do
   member = Members.new(params)
 
